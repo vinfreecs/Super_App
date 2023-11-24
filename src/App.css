@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&family=Roboto:wght@100;300;400;500;700;900&family=Single+Day&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: white;
+  font-family: "DM Sans", sans-serif;
+}
+
+.signup-page {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  overflow-y: hidden;
+}
+
+.signup-left-side{
+  position: relative;
+}
+
+.signup-left-side img {
+  position: relative;
+  width: 45rem;
+  height: 100%;
+}
+
+.img-bottom-txt{
+  position: absolute;
+  bottom: 5.5rem;
+  left: 2rem;
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  width: 43.4375rem;
+font-size: 3.4375rem;
+font-style: normal;
+font-weight: 900;
+line-height: 141.688%; /* 4.8705rem */
+letter-spacing: 0.06875rem;
+background-color: transparent;
+}
+
+.signup-right-side-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 33rem;
+  margin: auto;
+}
+.signup-right-side-wrapper h1 {
+  color: #72db73;
+  font-family: "Single Day", cursive;
+  font-size: 4.1875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 139.688%; /* 5.84944rem */
+}
+
+.signup-right-side-wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.signup-right-side-wrapper form input {
+  width: 31.375rem;
+  height: 4.05431rem;
+  border-radius: 0.2385rem;
+  background-color: #292929;
+  color: #7c7c7c;
+
+  font-size: 1.25206rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 139.688%;
+  letter-spacing: 0.02506rem;
+  border: none;
+  padding: 0 1rem;
+}
+.signup-right-side-wrapper form span {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.signup-right-side-wrapper form span p {
+  color: #7c7c7c;
+  font-size: 1.25206rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 139.688%; /* 1.749rem */
+  letter-spacing: 0.02506rem;
+}
+.signup-right-side-wrapper form input[type="checkbox"] {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-color: #d9d9d9;
+}
+.signup-right-side-wrapper form input[type="submit"] {
+  width: 32.375rem;
+  height: 3.4375rem;
+  border-radius: 1.75rem;
+  background-color: #72db73;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 108.688%; /* 1.96994rem */
+  letter-spacing: 0.03625rem;
+}
+.signup-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 32rem;
+  margin-top: 1.5rem;
+}
+.signup-details span a {
+  color: #72db73;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 141.7%;
+  letter-spacing: 0.0225rem;
+}
+.create-acc-txt {
+  font-size: 1.5625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 139.688%; /* 2.18263rem */
+  margin-bottom: 3rem;
+}
+.input-control input:focus{
+  outline: 0;
+}
+.input-control.error input{
+  border:2px solid rgba(255, 0, 0, 0.688);
+}
+.input-control .error {
+  color: #ff3860;
+  font-size: 0.75rem;
+  height: 1.5px;
+  margin-top: 0.25rem;
+}
