@@ -1,5 +1,6 @@
 import { useState } from "react";
 import sideImg from "../assets/sideImg.png";
+import {  useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const [inputData, setInputData] = useState({
@@ -33,8 +34,11 @@ export default function Signup() {
           [e.target.id]: false,
         };
       });
+      
     }
   };
+
+  const navigate = useNavigate();
 
   const handleInputFormSubmit = (e) => {
     e.preventDefault();
@@ -53,6 +57,7 @@ export default function Signup() {
         mobile_number: "",
         checkbox: false,
       })
+      navigate("/category")
     }
   };
 
