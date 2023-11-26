@@ -1,5 +1,5 @@
 import { useState } from "react";
-import sideImg from "../assets/sideImg.png";
+import sideImg from "../assets/images/sideImg.png";
 import {  useNavigate } from "react-router-dom";
 
 export default function Signup() {
