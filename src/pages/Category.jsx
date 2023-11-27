@@ -8,7 +8,7 @@ import fantasy from "../assets/images/fantasy.svg";
 import western from "../assets/images/western.svg";
 import music from "../assets/images/music.svg";
 import horror from "../assets/images/horror.svg";
-
+import { useState } from "react";
 
 export default function Category() {
   const categoryList = [
@@ -58,14 +58,53 @@ export default function Category() {
       imgSrc: fiction,
     },
   ];
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [showWarning,setShowWarning] = useState(false)
+  const handleSelectCategory = (e) =>{
+    let nameEle = e.target.name ? e.target.name : e.target.textContent
+    setSelectedCategories((prevState) =>{
+      prevState.forEach((ele)=>{
+        if(ele === nameEle) return prevState
+      })
+      setShowWarning(false)
+      return [...prevState,nameEle]
+    })
+    
+  }
+  const handleDelete = (e)=>{
+    setSelectedCategories((prevState)=>{
+      let newState = prevState.filter((ele) => ele != e.target.name)
+      return newState
+    })
+  }
+
+  const handleNextBtn = ()=>{
+    if(selectedCategories.length<3) setShowWarning(true)
+    else{
+      let check = JSON.parse(localStorage.getItem("userData"))
+      console.log(check)
+      check = {...check,categories:selectedCategories}
+      JSON.stringify(check)
+      console.log(check)
+      localStorage.setItem("userData",JSON.stringify(check))
+    }
+  }
   const items = categoryList.map((ele, index) => (
-    <div
+    <button
       key={index}
+      name={ele.categoryTitle}
       className="category-container"
       style={{ backgroundColor: ele.backgroundColor }}
+      onClick={handleSelectCategory}
     >
-      <p>{ele.categoryTitle}</p>
-      <img src={ele.imgSrc} alt="" />
+      <p name={ele.categoryTitle}>{ele.categoryTitle}</p>
+      <img name={ele.categoryTitle} src={ele.imgSrc} alt="" />
+    </button>
+  ));
+  const selectedItems = selectedCategories.map((ele, index) => (
+    <div key={index} className="selected-category">
+      <p>{ele}</p>
+      <button name={ele} onClick={handleDelete}>X</button>
     </div>
   ));
   return (
@@ -74,13 +113,14 @@ export default function Category() {
         <div className="category-left-wrapper">
           <h1>Super app</h1>
           <p>Choose your entertainment category</p>
-          <div className="selected-categories"></div>
-          <div className="waring-txt">
+          <div className="selected-categories">{selectedItems}</div>
+          {showWarning && <div className="warning-txt">
             <img src={warning} alt="" />
             <p>Minimum 3 category required</p>
-          </div>
+          </div>}
         </div>
         <div className="category-right-wrapper">{items}</div>
+        <button className="next-btn" onClick={handleNextBtn}>Next Page</button>
       </div>
     </>
   );

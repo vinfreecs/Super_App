@@ -148,7 +148,7 @@ background-color: transparent;
   
 }
 .category-right-wrapper{
-  margin: 4rem 7rem 11rem 7rem;
+  margin: 4rem 4rem 0rem 3rem;
   flex: 1;
   display: grid;
   grid-template-columns: repeat(3,minmax(14rem,1fr));
@@ -163,6 +163,7 @@ flex-direction: column;
 gap: 2.3rem;
 padding: 0.5rem;
 justify-content: center;
+border: none;
 }
 .category-container p{
   color: #FFF;
@@ -179,4 +180,92 @@ height: 6.775rem;
 border-radius: 0.72881rem;
 box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.55);
 align-self: center;
+}
+.category-left-wrapper{
+  margin: 5.31rem 10rem 0rem 6.1rem;
+}
+.category-left-wrapper h1{
+  color: #72DB73;
+  font-family: "Single Day", cursive;
+font-size: 4.4375rem;
+font-style: normal;
+font-weight: 400;
+line-height: 139.688%; /* 6.19863rem */
+}
+.category-left-wrapper p{
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+font-size: 4.25rem;
+font-style: normal;
+font-weight: 700;
+line-height: 139.688%; /* 5.93675rem */
+}
+.warning-txt{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.warning-txt p{
+  color: #F00;
+  font-family: "Roboto", sans-serif;
+font-size: 1.57125rem;
+font-style: normal;
+font-weight: 400;
+line-height: 105.688%; /* 1.66063rem */
+letter-spacing: 0.03144rem;
+}
+.selected-categories{
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.selected-category{
+  width: 12.0625rem;
+height: 3.25rem;
+border-radius: 1.9375rem;
+background: #148A08;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.selected-category p{
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+font-size: 1.57144rem;
+font-style: normal;
+font-weight: 400;
+line-height: 105.688%; /* 1.66081rem */
+letter-spacing: 0.03144rem;
+background-color: inherit;
+}
+.selected-category button{
+  color: #085C00;
+  font-family: "Roboto", sans-serif;
+font-size: 1.64581rem;
+font-style: normal;
+font-weight: 400;
+line-height: 105.688%; /* 1.73944rem */
+letter-spacing: 0.03294rem;
+background-color: inherit;
+border: none;
+}
+.next-btn{
+  position: fixed;
+  bottom: 2.2rem;
+  right: 4.4rem;
+  width: 12.5rem;
+height: 3.5rem;
+border-radius: 2.42856rem;
+background-color: #148A08;
+color: #FFF;
+text-align: center;
+font-size: 1.64288rem;
+font-style: normal;
+font-weight: 500;
+line-height: 92.2%; /* 1.51469rem */
+letter-spacing: 0.03288rem;
+border: none;
 }
