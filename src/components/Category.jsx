@@ -9,6 +9,7 @@ import western from "../assets/images/western.svg";
 import music from "../assets/images/music.svg";
 import horror from "../assets/images/horror.svg";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Category() {
   const [categoryList,setCategoryList] = useState([
@@ -69,6 +70,7 @@ export default function Category() {
   ])
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [showWarning, setShowWarning] = useState(false);
+  const navigate = useNavigate();
   const handleSelectCategory = (e) => {
     let nameEle = e.target.name ? e.target.name : e.target.textContent;
     let add = true;
@@ -130,6 +132,7 @@ export default function Category() {
       JSON.stringify(check);
       console.log(check);
       localStorage.setItem("userData", JSON.stringify(check));
+      navigate("/homepage")
     }
   };
   const items = categoryList.map((ele, index) => (
