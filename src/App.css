@@ -7,7 +7,24 @@
   font-family: "DM Sans", sans-serif;
   border: none;
 }
+::-webkit-scrollbar {
+  width: 20px;
+}
 
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9f94ff22;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9F94FF;
+}
 .signup-page {
   position: relative;
   height: 100vh;
@@ -347,21 +364,166 @@ display: flex;
 align-items: center;
 padding-left: 2rem;
 }
-::-webkit-scrollbar {
-  width: 20px;
+.news-wrapper{
+  width: 28.9375rem;
+  align-self: center;
 }
+.news-top{
+  width: 28.9375rem;
+  position: relative;
+  border-radius: 1.1875rem 1.1875rem 0rem 0rem;
+  width: 28.9375rem;
+height: 28.6875rem;
 
-::-webkit-scrollbar-track {
+background-size: cover;
+background-position: top;
+}
+.news-details{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.642);
+}
+.news-title{
+  color: #FFF;
+font-size: 2rem;
+font-style: normal;
+font-weight: 500;
+line-height: 123.688%; /* 2.47375rem */
+letter-spacing: 0.04rem;
+background-color: transparent;
+margin: 0.25rem;
+}
+.news-date-time{
+  margin: 0.25rem;
+} 
+.news-details p{
   background-color: transparent;
 }
-
-::-webkit-scrollbar-thumb {
-  background-color: #9f94ff22;
-  border-radius: 20px;
-  border: 6px solid transparent;
-  background-clip: content-box;
+.news-details p span{
+  background-color: transparent;
+  margin-right: 0.25rem;
 }
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #9F94FF;
+.news-content{
+  border-radius: 0rem 0rem 1.1875rem 1.1875rem;
+background: #FFF;
+color: #272727;
+text-align: justify;
+font-size: 1.14063rem;
+font-style: normal;
+font-weight: 400;
+line-height: 161.688%; /* 1.84425rem */
+padding: 2rem;
+height: 17.5rem;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.homepage-wrapper{
+  display: flex;
+  gap: 6rem;
+  margin: 1rem 0 0 2.5rem;
+  flex-wrap: wrap;
+}
+.weather-wrapper{
+  width: 55.75rem;
+height: 15.463rem;
+border-radius: 2.08925rem;
+background: #101744;
+}
+.weather-wrapper .date-time{
+  width: 100%;
+  border-radius: 2.08925rem 2.08925rem 0rem 0rem;
+background: #FF4ADE;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 7rem;
+}
+.weather-wrapper .date-time span{
+  background-color: inherit;
+  color: #FFF;
+font-size: 3.44125rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.datacard-wrapper{
+  background-color: #101744;
+  display: flex;
+  gap: 0.8rem;
+}
+.datacard-wrapper .icon{
+  align-self: center;
+}
+.datacard-wrapper .icon img{
+  width: 1.21425rem;
+}
+.datacard-wrapper .data-wrapper .data-units,
+.datacard-wrapper .data-wrapper .data-name{
+  background-color: #101744;
+  color: #FFF;
+font-size: 1.23744rem;
+font-style: normal;
+font-weight: 400;
+line-height: 139.688%;
+}
+.bottom-weather-wrapper{
+  display: flex;
+  background-color: inherit;
+  gap:10rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.08925rem;
+  margin: 5px;
+}
+.bottom-weather-wrapper div{
+  background-color: inherit;
+}
+.bottom-weather-wrapper div:nth-child(1) .weather-icon img{
+  background-color: inherit;
+}
+.bottom-weather-wrapper div:nth-child(1) p{
+  background-color: inherit;
+  color: #FFF;
+font-size: 1.9645rem;
+font-style: normal;
+font-weight: 400;
+line-height: 139.688%; /* 2.74419rem */
+}
+.bottom-weather-wrapper div:nth-child(2) .temp{
+  background-color: inherit;
+  color: #FFF;
+font-size: 4.889rem;
+font-style: normal;
+font-weight: 400;
+line-height: 139.688%; /* 6.82938rem */
+}
+.weather-forcast-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.temp-pressure-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bottom-weather-wrapper div:nth-child(3){
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.bottom-weather-wrapper img{
+  background-color: inherit;
+}
+.weather-icon img{
+  width: 5rem;
+}
+.homepage-wrapper .left-div{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }

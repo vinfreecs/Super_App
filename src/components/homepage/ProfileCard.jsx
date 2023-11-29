@@ -4,7 +4,6 @@ export default function ProfileCard(){
     const details = (JSON.parse(localStorage.getItem("userData")))
     // const checkScrollBar = ["Action","Fantasy","Fiction","Action","Fantasy","Fiction"]
     
-    console.log(details);
     return(
         <>
             <div className="profile-wrapper">
