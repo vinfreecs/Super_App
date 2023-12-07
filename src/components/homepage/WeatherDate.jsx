@@ -19,8 +19,9 @@ const DataCard = ({icon,data,name}) => {
 
 export default function WeatherDate() {
     const [weatherData,setWeatherData] = useState()
+    const apiKey = import.meta.env.VITE_WEATHER_API_KEY
     const fetchData = async () =>{
-        const response = await axios.get("http://api.weatherapi.com/v1/current.json?key=89e366586c3a46528d1144000232609&q=anantapur&aqi=no",{mode:"cors"})
+        const response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=anantapur&aqi=no`,{mode:"cors"})
         setWeatherData(response.data)
     }
     useEffect(()=>{

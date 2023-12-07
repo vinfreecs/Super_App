@@ -4,9 +4,10 @@ import { useState } from "react";
 
 export default function NewsCard() {
   const [articles, setArticles] = useState();
+  const apiKey = import.meta.env.VITE_NEWS_API_KEY
   const fetchData = async () => {
     const response = await axios.get(
-      "https://newsapi.org/v2/top-headlines?country=in&apiKey=42ae36f762fc4709bd94ce4b56dd1d4e"
+      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`,{mode:"cors"}
     );
     setArticles(response.data.articles);
   };

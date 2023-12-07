@@ -34,6 +34,7 @@ export default function Row({category}){
   },]
   
   const imageBaseUrl = "https://image.tmdb.org/t/p/original";
+  const apiKey = import.meta.env.VITE_TMDB_AUTH_KEY
   const returnOptions = () =>{
     const genreCode=(genreIds.filter(ele => ele.genre === category))[0].code
     return({method: "GET",
@@ -49,7 +50,7 @@ export default function Row({category}){
     headers: {
       accept: "application/json",
       Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjMmQyOGM0NDVlZjE0NTg0MjA4Yjk4MWM0ZTE5YzliYiIsInN1YiI6IjYyOGI4MDg1N2Q1ZGI1MWIyOTFjN2MwZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GJWcFgxoyOhwJEvKi-hgZWQlIlz26vn5wSHJY4qGga0",
+        apiKey,
     },})
   }
   const fetchData = async () => {
