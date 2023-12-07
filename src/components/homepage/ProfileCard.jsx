@@ -1,12 +1,21 @@
+import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 
 
 export default function ProfileCard(){
     const details = (JSON.parse(localStorage.getItem("userData")))
+    const navigate = useNavigate()
+    useEffect(()=>{
+        const hasCategories = details && ("categories" in details)
+        if(details===null || !hasCategories){
+            navigate("/register")
+        }
+    },[])
     // const checkScrollBar = ["Action","Fantasy","Fiction","Action","Fantasy","Fiction"]
     
     return(
         <>
-            <div className="profile-wrapper">
+            {details&& <div className="profile-wrapper">
                 <div className="profile-img">
                 </div>
                 <div className="profile-info">
@@ -21,7 +30,7 @@ export default function ProfileCard(){
                         ))}
                     </div>
                 </div>
-            </div>
+            </div>}
         </>
     )
 }

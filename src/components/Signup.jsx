@@ -43,12 +43,8 @@ export default function Signup() {
   const handleInputFormSubmit = (e) => {
     e.preventDefault();
     validateInputs();
-    let checkSize = 0;
-    for (let key in error) {
-      if (!error[key]) checkSize++;
-    }
-    if (checkSize === 5) {
-        console.log("confirm")
+    if (inputData.name!="" && inputData.username != "" && inputData.email!="" && inputData.mobile_number != "" && inputData.checkbox!=false) {
+       
       localStorage.setItem("userData", JSON.stringify(inputData));
       setInputData({
         name: "",
@@ -63,7 +59,6 @@ export default function Signup() {
 
   const validateInputs = () => {
     for (let key in inputData) {
-      console.log(key, inputData[key]);
       if (!inputData[key]) {
         setError((prevState) => {
           return {

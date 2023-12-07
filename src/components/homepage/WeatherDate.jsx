@@ -21,18 +21,32 @@ export default function WeatherDate() {
     const [weatherData,setWeatherData] = useState()
     const fetchData = async () =>{
         const response = await axios.get("http://api.weatherapi.com/v1/current.json?key=89e366586c3a46528d1144000232609&q=anantapur&aqi=no",{mode:"cors"})
-        console.log(response.data);
         setWeatherData(response.data)
     }
     useEffect(()=>{
         fetchData();
     },[])
+    const formatAMPM = (date) => {
+      let hours = date.getHours();
+      let minutes = date.getMinutes();    
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+    
+      hours %= 12;
+      hours = hours || 12;    
+      minutes = minutes < 10 ? `0${minutes}` : minutes;
+    
+      const strTime = `${hours}:${minutes} ${ampm}`;
+    
+      return strTime;
+    };
+    let nowDate = new Date().toISOString().split('T')[0];
+    let nowTime = formatAMPM(new Date())
   return (
     <>
       {weatherData && <div className="weather-wrapper">
         <div className="date-time">
-          <span>11-28-2023</span>
-          <span>07:41 PM</span>
+          <span>{nowDate}</span>
+          <span>{nowTime}</span>
         </div>
         <div className="bottom-weather-wrapper">
           <div className="weather-forcast-wrapper">

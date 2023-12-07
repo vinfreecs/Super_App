@@ -127,10 +127,8 @@ export default function Category() {
     if (selectedCategories.length < 3) setShowWarning(true);
     else {
       let check = JSON.parse(localStorage.getItem("userData"));
-      console.log(check);
       check = { ...check, categories: selectedCategories };
       JSON.stringify(check);
-      console.log(check);
       localStorage.setItem("userData", JSON.stringify(check));
       navigate("/homepage")
     }
