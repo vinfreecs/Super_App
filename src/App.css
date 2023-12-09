@@ -422,6 +422,7 @@ justify-content: center;
   display: flex;
   justify-content: center;
   margin:20px 20px 40px 20px;
+  align-items: center;
 }
 .weather-wrapper{
   width: 100%;
@@ -575,6 +576,7 @@ align-items: center;
   flex-wrap: wrap;
   flex: 1;
   gap: 1rem;
+  justify-content: center;
 }
 .timer-wrapper form{
   display: flex;

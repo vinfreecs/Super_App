@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import NewsCard from "../components/homepage/NewsCard";
 import Notes from "../components/homepage/Notes";
 import ProfileCard from "../components/homepage/ProfileCard";
-import Timer from "../components/homepage/Timer";
+// import Timer from "../components/homepage/Timer";
 import WeatherDate from "../components/homepage/WeatherDate";
 
 export default function Homepage() {
@@ -19,7 +19,7 @@ export default function Homepage() {
             <WeatherDate />
           </div>
           <Notes />
-          <Timer />
+          {/* <Timer /> */}
         </div>
         
         <NewsCard />
